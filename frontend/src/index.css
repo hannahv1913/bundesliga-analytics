@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color: #070709;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.16;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.26;
+    transform: scale(1.08) translate(16px, -12px);
+  }
+}
+
+@keyframes pulseGlowReverse {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.22;
+    transform: scale(1.06) translate(-18px, 14px);
+  }
+}
+
+.bundesliga-grid-bg {
+  background-image:
+    linear-gradient(
+      125deg,
+      rgba(210, 5, 21, 0.06) 0%,
+      transparent 35%,
+      transparent 65%,
+      rgba(210, 5, 21, 0.05) 100%
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
